@@ -48,7 +48,7 @@ As an inventory manager,
 ## Step 3: ATDD, BDD, and TDD
 Develop detailed test scenarios that will validate the functionality of the inventory optimization system.
 
-### For "User Story 1"
+### For [User Story 1](https://github.com/prakashvadrevu/oxford-ai-capstone-group-3/blob/main/abstract.md#1-dynamic-inventory-adjustment-based-on-sales-forecast)
 
 #### Scenario: Ensuring Inventory Levels Meet Forecasted Demand
 * Given that the system has current and historical sales data,
