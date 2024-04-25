@@ -29,6 +29,12 @@ These user stories should reflect the specific goals and functionalities needed 
 **As a business analyst,**
 * I want to view reports on the accuracy of demand forecasts,
 * So that I can evaluate the performance of the forecasting model and make adjustments if necessary.
+#### Acceptance Criteria:
+* The system should generate reports on demand forecast accuracy for specified time periods.
+* Reports should include metrics such as forecasted demand, actual demand, variance, and percentage accuracy.
+* Users should be able to select different time periods (e.g., daily, weekly, monthly) for viewing accuracy reports.
+* The accuracy calculation should consider both overestimations and underestimations.
+* Reports should be accessible through a user-friendly interface, allowing easy navigation and filtering options.
 
 ### 3. Demand Forecast Visualization
 **As a data analyst,**
@@ -68,7 +74,7 @@ BDD extends ATDD by defining expected behaviors in a ubiquitous language underst
   - Given the current stock level is below the reorder threshold
   - When an order is received
   - Then a purchase order should be generated to replenish stock
-* Scenario: Avoid overstocking non-perishable items  
+* **Scenario: Avoid overstocking non-perishable items  **
   - Given the current stock level exceeds the maximum threshold
   - And the item is non-perishable
   - When no orders are received
@@ -79,6 +85,40 @@ TDD involves writing unit tests before production code to drive the implementati
 * That the reorder quantity is calculated correctly based on current stock and desired levels
 * That expiration dates are properly tracked, and discounts are applied when items are nearing expiration
 * That ordering costs and constraints (e.g., supplier lead times) are considered in reorder decisions
+
+### For [User Story 2](https://github.com/prakashvadrevu/oxford-ai-capstone-group-3/blob/main/abstract.md#2-view-demand-forecast-accuracy)
+
+#### ATDD Test Cases:
+* Given that the system has historical demand data and forecasted demand for a specific time period,
+* When I request a demand forecast accuracy report,
+* Then the report should display the actual demand, forecasted demand, variance, and percentage accuracy for each product.
+
+#### BDD Scenarios:
+* **Scenario: Viewing demand forecast accuracy report**
+  - Given the system has historical demand data and forecasted demand for a specific time period
+  - When the user requests a demand forecast accuracy report
+  - Then the report should display actual demand, forecasted demand, variance, and percentage accuracy for each product
+* **Scenario: Changing time period for accuracy report**
+  - Given the system generates forecast accuracy reports
+  - When the user selects a different time period
+  - Then the report should update to display accuracy metrics for the selected period
+
+#### TDD Test Cases:
+* Test Case: Verify that the system calculates percentage accuracy correctly
+  - Input: Actual demand = 100, Forecasted demand = 90
+  - Expected Output: Percentage accuracy = 90%
+* Test Case: Verify that the system handles negative variances appropriately
+  - Input: Actual demand = 80, Forecasted demand = 100
+  - Expected Output: Variance = -20
+* Test Case: Verify that the report updates correctly when selecting different time periods
+  - Input: Request weekly accuracy report instead of monthly
+  - Expected Output: Updated report showing accuracy metrics for the selected week.
+* Test Case: Verify that the interface allows filtering by product and time period
+  - Input: Filter report by a specific product and time period
+  - Expected Output: Display accuracy metrics only for the selected product and time period.
+* Test Case: Verify that the report layout is visually clear and organized
+  - Input: Access the accuracy report
+  - Expected Output: Clear presentation of actual demand, forecasted demand, variance, and percentage accuracy for easy interpretation.
 
 By following ATDD, BDD, and TDD practices, the inventory optimization system can be developed in an iterative and test-driven manner, ensuring it meets user requirements and expected behaviors while maintaining a comprehensive suite of automated tests
 
