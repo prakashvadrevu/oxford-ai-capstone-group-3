@@ -1,0 +1,894 @@
+{
+  "version": "1.4.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "caption": "Product"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 0,
+          "y": 300
+        },
+        "caption": "Category"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": 300,
+          "y": 300
+        },
+        "caption": "Country"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 300,
+          "y": 0
+        },
+        "caption": "Store"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 152,
+          "y": -198
+        },
+        "caption": "Kellys"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "TARGETS",
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n1",
+        "type": "IN",
+        "fromId": "n4",
+        "toId": "n3"
+      },
+      {
+        "id": "n2",
+        "type": "CONTAINS",
+        "fromId": "n5",
+        "toId": "n0"
+      },
+      {
+        "id": "n3",
+        "type": "CONTAINS",
+        "fromId": "n5",
+        "toId": "n4"
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "1.4.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:n0",
+            "token": "Product",
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "Product ID",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:2",
+                "token": "Product Category",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:n1",
+            "token": "Category",
+            "properties": [
+              {
+                "$id": "p:3",
+                "token": "Category",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:n3",
+            "token": "Country",
+            "properties": [
+              {
+                "$id": "p:5",
+                "token": "Country",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:n4",
+            "token": "Store",
+            "properties": [
+              {
+                "$id": "p:4",
+                "token": "StoreId",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:6",
+                "token": "Country",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:n5",
+            "token": "Kellys",
+            "properties": [
+              {
+                "$id": "p:7",
+                "token": "ID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:8",
+                "token": "Store ID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:9",
+                "token": "Country",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:10",
+                "token": "Product ID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:11",
+                "token": "Product Category",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:12",
+                "token": "Units Sold",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:13",
+                "token": "Date of Sale",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:14",
+                "token": "GDP Growth Rate",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:15",
+                "token": "Inflation Rate",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:16",
+                "token": "Price Sold",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:n0",
+            "token": "TARGETS",
+            "properties": []
+          },
+          {
+            "$id": "rt:n1",
+            "token": "IN",
+            "properties": []
+          },
+          {
+            "$id": "rt:n2",
+            "token": "CONTAINS",
+            "properties": []
+          },
+          {
+            "$id": "rt:n3",
+            "token": "CONTAINS",
+            "properties": []
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:n0",
+            "labels": [
+              {
+                "$ref": "#nl:n0"
+              }
+            ]
+          },
+          {
+            "$id": "n:n1",
+            "labels": [
+              {
+                "$ref": "#nl:n1"
+              }
+            ]
+          },
+          {
+            "$id": "n:n3",
+            "labels": [
+              {
+                "$ref": "#nl:n3"
+              }
+            ]
+          },
+          {
+            "$id": "n:n4",
+            "labels": [
+              {
+                "$ref": "#nl:n4"
+              }
+            ]
+          },
+          {
+            "$id": "n:n5",
+            "labels": [
+              {
+                "$ref": "#nl:n5"
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:n0",
+            "type": {
+              "$ref": "#rt:n0"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n1"
+            }
+          },
+          {
+            "$id": "r:n1",
+            "type": {
+              "$ref": "#rt:n1"
+            },
+            "from": {
+              "$ref": "#n:n4"
+            },
+            "to": {
+              "$ref": "#n:n3"
+            }
+          },
+          {
+            "$id": "r:n2",
+            "type": {
+              "$ref": "#rt:n2"
+            },
+            "from": {
+              "$ref": "#n:n5"
+            },
+            "to": {
+              "$ref": "#n:n0"
+            }
+          },
+          {
+            "$id": "r:n3",
+            "type": {
+              "$ref": "#rt:n3"
+            },
+            "from": {
+              "$ref": "#n:n5"
+            },
+            "to": {
+              "$ref": "#n:n4"
+            }
+          }
+        ],
+        "constraints": [
+          {
+            "$id": "c:1",
+            "name": "Product_ID_Product_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n0"
+            },
+            "properties": [
+              {
+                "$ref": "#p:1"
+              }
+            ]
+          },
+          {
+            "$id": "c:2",
+            "name": "Category_Category_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:3"
+              }
+            ]
+          },
+          {
+            "$id": "c:3",
+            "name": "StoreId_Store_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n4"
+            },
+            "properties": [
+              {
+                "$ref": "#p:4"
+              }
+            ]
+          },
+          {
+            "$id": "c:5",
+            "name": "ID_Kellys_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n5"
+            },
+            "properties": [
+              {
+                "$ref": "#p:7"
+              }
+            ]
+          },
+          {
+            "$id": "c:4",
+            "name": "Country_Country_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n3"
+            },
+            "properties": [
+              {
+                "$ref": "#p:5"
+              }
+            ]
+          }
+        ],
+        "indexes": [
+          {
+            "$id": "i:1",
+            "name": "Product_ID_Product_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n0"
+            },
+            "properties": [
+              {
+                "$ref": "#p:1"
+              }
+            ]
+          },
+          {
+            "$id": "i:2",
+            "name": "Category_Category_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:3"
+              }
+            ]
+          },
+          {
+            "$id": "i:4",
+            "name": "Country_Country_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n3"
+            },
+            "properties": [
+              {
+                "$ref": "#p:5"
+              }
+            ]
+          },
+          {
+            "$id": "i:3",
+            "name": "StoreId_Store_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n4"
+            },
+            "properties": [
+              {
+                "$ref": "#p:4"
+              }
+            ]
+          },
+          {
+            "$id": "i:5",
+            "name": "ID_Kellys_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:n5"
+            },
+            "properties": [
+              {
+                "$ref": "#p:7"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:n0"
+          },
+          "keyProperty": {
+            "$ref": "#p:1"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n1"
+          },
+          "keyProperty": {
+            "$ref": "#p:3"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n3"
+          },
+          "keyProperty": {
+            "$ref": "#p:5"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n4"
+          },
+          "keyProperty": {
+            "$ref": "#p:4"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n5"
+          },
+          "keyProperty": {
+            "$ref": "#p:7"
+          }
+        }
+      ]
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local/csv",
+        "tableSchemas": [
+          {
+            "$id": "t:1",
+            "name": "products.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "Product ID",
+                "type": "integer",
+                "sample": "18702",
+                "include": true
+              },
+              {
+                "name": "Product Category",
+                "type": "string",
+                "sample": "Mens",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:3",
+            "name": "product_categories.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "Product Category",
+                "type": "string",
+                "sample": "Mens",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:4",
+            "name": "countries.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "Country",
+                "type": "string",
+                "sample": "Spain",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:2",
+            "name": "stores.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "Store ID",
+                "type": "integer",
+                "sample": "8036",
+                "include": true
+              },
+              {
+                "name": "Country",
+                "type": "string",
+                "sample": "Spain",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:5",
+            "name": "Kelly's Dataset.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "ID",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "Store ID",
+                "type": "integer",
+                "sample": "8036",
+                "include": true
+              },
+              {
+                "name": "Country",
+                "type": "string",
+                "sample": "Spain",
+                "include": true
+              },
+              {
+                "name": "Product ID",
+                "type": "integer",
+                "sample": "18702",
+                "include": true
+              },
+              {
+                "name": "Product Category",
+                "type": "string",
+                "sample": "Mens",
+                "include": true
+              },
+              {
+                "name": "Units Sold",
+                "type": "integer",
+                "sample": "2",
+                "include": true
+              },
+              {
+                "name": "Date of Sale",
+                "type": "string",
+                "sample": "1/24/2024",
+                "include": true
+              },
+              {
+                "name": "GDP Growth Rate",
+                "type": "float",
+                "sample": "7.07",
+                "include": true
+              },
+              {
+                "name": "Inflation Rate",
+                "type": "float",
+                "sample": "0.17",
+                "include": true
+              },
+              {
+                "name": "Price Sold",
+                "type": "float",
+                "sample": "50.1",
+                "include": true
+              }
+            ]
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:n0"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "Product ID",
+              "property": {
+                "$ref": "#p:1"
+              }
+            },
+            {
+              "fieldName": "Product Category",
+              "property": {
+                "$ref": "#p:2"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n1"
+          },
+          "tableSchema": {
+            "$ref": "#t:3"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "Product Category",
+              "property": {
+                "$ref": "#p:3"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n3"
+          },
+          "tableSchema": {
+            "$ref": "#t:4"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "Country",
+              "property": {
+                "$ref": "#p:5"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n4"
+          },
+          "tableSchema": {
+            "$ref": "#t:2"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "Store ID",
+              "property": {
+                "$ref": "#p:4"
+              }
+            },
+            {
+              "fieldName": "Country",
+              "property": {
+                "$ref": "#p:6"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n5"
+          },
+          "tableSchema": {
+            "$ref": "#t:5"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "ID",
+              "property": {
+                "$ref": "#p:7"
+              }
+            },
+            {
+              "fieldName": "Store ID",
+              "property": {
+                "$ref": "#p:8"
+              }
+            },
+            {
+              "fieldName": "Country",
+              "property": {
+                "$ref": "#p:9"
+              }
+            },
+            {
+              "fieldName": "Product ID",
+              "property": {
+                "$ref": "#p:10"
+              }
+            },
+            {
+              "fieldName": "Product Category",
+              "property": {
+                "$ref": "#p:11"
+              }
+            },
+            {
+              "fieldName": "Units Sold",
+              "property": {
+                "$ref": "#p:12"
+              }
+            },
+            {
+              "fieldName": "Date of Sale",
+              "property": {
+                "$ref": "#p:13"
+              }
+            },
+            {
+              "fieldName": "GDP Growth Rate",
+              "property": {
+                "$ref": "#p:14"
+              }
+            },
+            {
+              "fieldName": "Inflation Rate",
+              "property": {
+                "$ref": "#p:15"
+              }
+            },
+            {
+              "fieldName": "Price Sold",
+              "property": {
+                "$ref": "#p:16"
+              }
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:n0"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Product ID"
+          },
+          "toMapping": {
+            "fieldName": "Product Category"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n1"
+          },
+          "tableSchema": {
+            "$ref": "#t:2"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Store ID"
+          },
+          "toMapping": {
+            "fieldName": "Country"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n2"
+          },
+          "tableSchema": {
+            "$ref": "#t:5"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "ID"
+          },
+          "toMapping": {
+            "fieldName": "Product ID"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n3"
+          },
+          "tableSchema": {
+            "$ref": "#t:5"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "ID"
+          },
+          "toMapping": {
+            "fieldName": "Store ID"
+          }
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
