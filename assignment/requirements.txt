@@ -1,0 +1,9 @@
+Flask
+langchain
+neo4j
+langchain-community
+langchain-openai
+langchain-experimental
+wikipedia
+tiktoken
+yfiles_jupyter_graphs
