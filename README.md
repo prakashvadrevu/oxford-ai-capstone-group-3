@@ -1,4 +1,4 @@
-# Instructions to run this Assignment (ChatBot)
+# GROUP 3 CAPSTONE PROJECT - GRAPH RAG
 
 Switch to `assignment` folder
 
