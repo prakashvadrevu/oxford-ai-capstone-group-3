@@ -1,6 +1,6 @@
 # GROUP 3 CAPSTONE PROJECT - GRAPH RAG
 
-Switch to **`assignment`** folder
+Switch to the **`assignment`** folder
 
 ## Install all the required packages
 In a terminal run
